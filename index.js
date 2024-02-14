@@ -48,7 +48,7 @@ async function fetchPhotos(sid) {
  
    while (hasMore) {
      const photosResponse = await fetch(
-       `https://${ip}/photo/webapi/entry.cgi?api=SYNO.${fotoSpace}.Browse.Item&version=1&method=list&type=photo&offset=${offset}&limit=${limit}&_sid=${sid}&additional=["thumbnail","resolution"]`
+       `https://${ip}/webapi/entry.cgi?api=SYNO.${fotoSpace}.Browse.Item&version=1&method=list&type=photo&offset=${offset}&limit=${limit}&_sid=${sid}&additional=["thumbnail","resolution"]`
      );
 
      const photosData = await photosResponse.json();
