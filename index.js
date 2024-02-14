@@ -31,7 +31,7 @@ app.set('view engine', 'ejs');
 async function authenticate() {
   process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0; 
   const authResponse = await fetch(
-    `https://${ip}/photo/webapi/auth.cgi?api=SYNO.API.Auth&version=3&method=login&account=${encodeURIComponent(user)}&passwd=${encodeURIComponent(password)}`
+    `https://${ip}/webapi/auth.cgi?api=SYNO.API.Auth&version=3&method=login&account=${encodeURIComponent(user)}&passwd=${encodeURIComponent(password)}`
   )
   process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 1;
   const authData = await authResponse.json()
