@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="Memories from <%=formattedCurrentDate%>">>
+
+<meta property="og:title" content="Buckley Photos">
+<meta property="og:type" content="article" />
+<meta property="og:image" content="<%= photo.thumbBig %>">
+<meta name="twitter:card" content="<%= photo.thumbBig %>e">
+
+<!--  Non-Essential, But Recommended -->
+<meta property="og:description" content="Memories from <%=formattedCurrentDate%>">
+<meta property="og:site_name" content="Buckley Photos">
+
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=0">
     <title>Memories</title>
@@ -114,7 +126,8 @@
 <body>
     <header>
         <div style="width: 75vw; margin-bottom: 4vh;" >
-            <h1 >Synology Memories</h1>
+            <h1 >On This Day</h1>
+            <h3 ><em>in Buckley Family Memories</em></h3>
         </div>
     </header>
 
