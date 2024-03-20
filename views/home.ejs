@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+    <% const uniqueDates = new Set();
+    urlList.forEach(photo => {
+        formattedDate = new Date(photo.date).toLocaleString().split(',')[0]
+        uniqueDates.add(formattedDate);
+    })
+
+    uniqueDates.forEach(currentDate => {
+        const [month, day, year] = currentDate.split("/").map(Number);
+        const currentDateObj = new Date(year, month - 1, day);
+        const options = { day: 'numeric', month: 'short', year: 'numeric' };
+        const formattedCurrentDate = currentDateObj.toLocaleDateString('en-US', options);
+    %>
 <head>
     <meta name="description" content="Memories from <%=formattedCurrentDate%>">>
 
